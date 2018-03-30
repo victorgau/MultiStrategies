@@ -6,18 +6,19 @@ python:
   - "3.6"
    
 #before executing the code installing the dependencies if any
-install:
-  - pip install -r requirements.txt
-  - wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
-  - tar zxvf ta-lib-0.4.0-src.tar.gz
-  - cd ta-lib
-  - ./configure --prefix="/usr"
-  - make
-  - sudo make install
-  - pip install ta-lib
-  - cd ..
+# install:
+#   - pip install -r requirements.txt
+#   - wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
+#   - tar zxvf ta-lib-0.4.0-src.tar.gz
+#   - cd ta-lib
+#   - ./configure --prefix="/usr"
+#   - make
+#   - sudo make install
+#   - pip install ta-lib
+#   - cd ..
    
 #running the desired code file for testing your code
 script:
-  - python analysis.py
-  - bash push.sh
+  #- python analysis.py
+  #- bash push.sh
+  - echo ${TEST_VAR}
