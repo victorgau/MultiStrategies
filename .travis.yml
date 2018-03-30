@@ -22,4 +22,4 @@ script:
   - python analysis.py
 
 after_success:
-  - push.sh
+  - ./push.sh
