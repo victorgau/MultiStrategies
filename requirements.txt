@@ -20,7 +20,7 @@ requests-ftp==0.3.1
 scikit-learn==0.19.1
 scipy==1.0.1
 six==1.11.0
-TA-Lib==0.4.17
+TA-Lib==0.4.14
 tabulate==0.8.2
 urllib3==1.22
 wincertstore==0.2
