@@ -20,6 +20,4 @@ install:
 #running the desired code file for testing your code
 script:
   - python analysis.py
-
-after_success:
-  - ./push.sh
+  - bash push.sh
