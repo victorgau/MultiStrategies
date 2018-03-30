@@ -203,6 +203,7 @@ def JuianJuian4715_strategy(df):
     df['positions'] = df['signals'].cumsum().shift()
     return df
 
+
 def 大盜韓不住_strategy(df):
     """
     乖離率,乖離率代表的就是投資者的平均報酬率，當股價漲離平均成本很多的時候，
