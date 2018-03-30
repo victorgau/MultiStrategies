@@ -20,3 +20,9 @@ install:
 #running the desired code file for testing your code
 script:
   - python analysis.py
+  - git config --global user.email "victorgau@gmail.com"
+  - git config --global user.name "Victor Gau"
+  - git add docs/*.html
+  - git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
+  - git remote add origin https://${GH_TOKEN}@github.com/victorgau/MultiStrategies.git > /dev/null 2>&1
+  - git push --quiet --set-upstream origin master 
