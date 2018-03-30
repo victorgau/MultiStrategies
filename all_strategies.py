@@ -29,23 +29,23 @@ def Breakout_strategy(df):
     return df
 
 
-def RSI_7030_strategy(df):
-    df['RSI'] = talib.RSI(df['Close'].values)
+# def RSI_7030_strategy(df):
+#     df['RSI'] = talib.RSI(df['Close'].values)
 
-    has_position = False
-    df['signals'] = 0
-    for t in range(2, df['signals'].size):
-        if df['RSI'][t-1] < 30:
-            if not has_position:
-                df.loc[df.index[t], 'signals'] = 1
-                has_position = True
-        elif df['RSI'][t-1] > 70:
-            if has_position:
-                df.loc[df.index[t], 'signals'] = -1
-                has_position = False
+#     has_position = False
+#     df['signals'] = 0
+#     for t in range(2, df['signals'].size):
+#         if df['RSI'][t-1] < 30:
+#             if not has_position:
+#                 df.loc[df.index[t], 'signals'] = 1
+#                 has_position = True
+#         elif df['RSI'][t-1] > 70:
+#             if has_position:
+#                 df.loc[df.index[t], 'signals'] = -1
+#                 has_position = False
 
-    df['positions'] = df['signals'].cumsum().shift()
-    return df
+#     df['positions'] = df['signals'].cumsum().shift()
+#     return df
 
 
 def RSI_8020_strategy(df):
