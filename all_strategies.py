@@ -361,8 +361,5 @@ def 第六組_strategy(df):
                 df.loc[df.index[t], 'signals'] = -1 #賣出的訊號
                 has_position = False
 
-
-
-
     df['positions'] = df['signals'].cumsum().shift()
     return df
