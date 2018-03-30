@@ -14,6 +14,8 @@ install:
   - ./configure --prefix="/usr"
   - make
   - sudo make install
+  - pip install ta-lib
+  - cd ..
    
 #running the desired code file for testing your code
 script:
