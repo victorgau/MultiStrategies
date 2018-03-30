@@ -3,19 +3,19 @@ language: python
 python:
   - '3.6'
 
-# install:
-#   - pip install -r requirements.txt
-#   - wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
-#   - tar zxvf ta-lib-0.4.0-src.tar.gz
-#   - cd ta-lib
-#   - ./configure --prefix="/usr"
-#   - make
-#   - sudo make install
-#   - pip install ta-lib
-#   - cd ..
+install:
+  - pip install -r requirements.txt
+  - wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
+  - tar zxvf ta-lib-0.4.0-src.tar.gz
+  - cd ta-lib
+  - ./configure --prefix="/usr"
+  - make
+  - sudo make install
+  - pip install ta-lib
+  - cd ..
 
 script:
-  # - python analysis.py
+  - python analysis.py
   - git config credential.helper "store --file=.git/credentials"
   - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
   - bash push.sh
