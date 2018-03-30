@@ -1,0 +1,14 @@
+#declaring the type of language
+language: python
+   
+#declaring the versions of the language specified above  you to want the test the code against
+python:
+  - "3.6"
+   
+#before executing the code installing the dependencies if any
+install:
+  - pip install -r requirements.txt
+   
+#running the desired code file for testing your code
+script:
+  - python analysis.py

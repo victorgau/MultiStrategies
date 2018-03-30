@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>回測結果</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $("#tabs").tabs();
+    $("#Sharpe").load("Sharpe.html");
+    $("#Returns").load("Returns.html");
+    $("#MaxDrawDown").load("MaxDrawDown.html");
+    $("#MaxDrawDownDuration").load("MaximumDrawDownDuration.html");
+  } );
+  </script>
+  <style>
+  h1 {
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  }
+
+table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+table tr:hover {background-color: #ddd;}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="jumbotron text-center">
+<h1>2017 FM617 Project 01 回測結果</h1>
+<a href="https://github.com/victorgau/2017FM617Project01" class="btn btn-info" role="button">回 GitHub Repo 頁面</a>
+</div>
+
+<div id="tabs">
+  <ul>
+    <li><a href="#Sharpe">Sharpe</a></li>
+    <li><a href="#Returns">Returns</a></li>
+    <li><a href="#MaxDrawDown">MaxDrawDown</a></li>
+    <li><a href="#MaxDrawDownDuration">MaxDrawDownDuration</a></li>
+  </ul>
+  <div id="Sharpe"></div>
+  <div id="Returns"></div>
+  <div id="MaxDrawDown"></div>
+  <div id="MaxDrawDownDuration"></div>
+</div>
+</div>
+
+</body>
+</html>
