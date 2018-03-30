@@ -1,24 +1,23 @@
-#declaring the type of language
 language: python
-   
-#declaring the versions of the language specified above  you to want the test the code against
+
 python:
-  - "3.6"
-   
-#before executing the code installing the dependencies if any
-# install:
-#   - pip install -r requirements.txt
-#   - wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
-#   - tar zxvf ta-lib-0.4.0-src.tar.gz
-#   - cd ta-lib
-#   - ./configure --prefix="/usr"
-#   - make
-#   - sudo make install
-#   - pip install ta-lib
-#   - cd ..
-   
-#running the desired code file for testing your code
+  - '3.6'
+
+install:
+  - pip install -r requirements.txt
+  - wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
+  - tar zxvf ta-lib-0.4.0-src.tar.gz
+  - cd ta-lib
+  - ./configure --prefix="/usr"
+  - make
+  - sudo make install
+  - pip install ta-lib
+  - cd ..
+
 script:
-  #- python analysis.py
-  #- bash push.sh
-  - echo ${TEST_VAR}
+  - python analysis.py
+  - bash push.sh
+
+env:
+  global:
+    secure: UF9/oC/rl1pV/v335/oFvnz/YpcR+LJKXtuRkbBRZfK6T3xvvAVkIChcjrlVL+aV5kdbmQICnyqtfbgziIqH6+cYRsTqa6zRppVaKdJCYKXKPX+UiZ0K5MUVhKPyzFaJ1qukQaRfOXhgT6I8onHJdRGHstEvTQS2JBxXz4dCPBWHlGx0xeZb6u06FtaJGp8dqg9S1J5Ae87EE6ceEa70MKx+KvEzcxw9/g0TAkEPO/Wj376zhdNNwWOmmeAEbBjb1H9tu34qaSsfjr3JRHGgASwI17baEA4OA65vEwQC0OR3Q8pIQ80tQezKFE/e7MTR3aARQHWnQ2H0XxyGA5NFIEMU1sejFZRysjOrvV5CvuZ+FW8vSGbmjqRY++8V3hn9ZCFFARKxXdmdImPUKXhsShZ8YeBQDOnKleX6WoXZjqVpJwRXEzi5yOX97HwDo/smUPCjuDkNfNKTSG9obPC4qFWnUh+TxzgfbpIvpI/S7Oe5YpVDgfzHHQYckV/4+kGuKu13gX7CSeMWwQ8Vy5i46vVrbnFlFXHoNz+KsuF0n9SQSXUzargFs08cVdDgTuWZdyhy4/YiF7Mb2PoM7kbgFKZ3DmB14k6aWAe2kd1GPr1L38uY1emHpH7G5GlOIMgH7Kak3i6JW+cVBvd5dmXCtSp3joxEvs1xKNqJ9srlR6o=
