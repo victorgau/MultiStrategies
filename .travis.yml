@@ -23,7 +23,7 @@ script:
   - git add docs/*.html
   - git status
   - git commit -m "Upload from Travis"
-  - git push origin master
+  - git push origin HEAD:master
 
 env:
   global:
