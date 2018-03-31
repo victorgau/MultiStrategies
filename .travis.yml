@@ -21,6 +21,7 @@ script:
   - git config --global user.email "victorgau@gmail.com"
   - git config --global user.name "Victor Gau"
   - git add docs/*.html
+  - git status
   - git commit -m "Upload from Travis"
   - git push origin master
 
