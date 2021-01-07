@@ -6,7 +6,7 @@ ffn==0.3.3
 future==0.16.0
 idna==2.6
 kiwisolver==1.0.1
-lxml==4.2.1
+lxml==4.6.2
 matplotlib==2.2.2
 numpy==1.14.2
 pandas==0.22.0
